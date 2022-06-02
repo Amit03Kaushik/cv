@@ -1,0 +1,108 @@
+body{  
+    font-family: Calibri, Helvetica, sans-serif;  
+    background-image: url("6288899.jpg"); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+ 
+  }  
+  .container {
+    width: 50%;
+    background-color: #0000008c;
+    text-align: justify;
+    margin: 2% 23% auto;
+    border-radius: 27px;
+    padding: 28px;
+    border: 4px solid black;
+    box-shadow: 0px 0px 20px #f9f5f5;
+    margin-bottom: 2%;
+}
+  .formfirst{ font-size: 20px;}
+
+  .formfirst input {
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    margin-top: 20px;
+    /* border: 2px solid lightcoral; */
+    width: 60%;
+}
+
+input#fname {
+  color: aliceblue;
+}
+
+input#femail {
+  color: aliceblue;
+}
+
+input#fphone {
+  color: aliceblue;
+}
+
+input#fpass {
+  color: aliceblue;
+}
+input#fcpass {
+  color: aliceblue;
+}
+.border_bottom{
+  border-bottom: 3px solid white;
+  width: 60%;
+  
+
+}
+
+.border_bottom:hover{
+  border-bottom: 3px solid darkred;
+  transition: .5s;
+}
+  h1 {margin-top: 10px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 40px;
+}
+
+  .allform {
+    margin-left:30%;
+
+  }
+
+  input[type="radio"] {
+    margin-top: 20px;
+}
+  
+  .formerror{color:red;
+  font-size: 9px;}
+
+  .course {
+    border: 2px solid red;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 70px;
+    padding: 2px;
+}
+  
+.but {
+  cursor: pointer;
+  border-radius: 7px;
+  width: 114px;
+  /* height: 33px; */
+  font-size: 20px;
+  margin: 43px 80px;
+  text-align: center;
+  color: #f5efef;
+  background-color: darkred;
+  padding: 8px;
+}
+
+.but:hover{
+  border: 2px solid darkred;
+  color: darkred;
+  background-color: white;
+  transition:1s;
+  transition-timing-function: ease;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation by javascript</title>
+    <link rel="stylesheet" href="mystyle.css">
+    
+
+</head>
+<body>
+ <div class="container">
+
+    <h1>Registration <span style="color:darkred;">Form</span></h1>
+    <hr>
+    <div>
+
+    <form class="allform" action="#" name="myform" onsubmit=" validateform(); return false;" method="post">
+        <div class="formfirst border_bottom" id="name" >
+          
+            <input type="text" id="fname" placeholder="Full name" onchange="myFunction()" onkeyup="document.getElementById('namerror').innerHTML = '';"><span id ="namerror" class="formerror"></span>
+        </div> 
+
+        <div class="formfirst " id="course" >
+            <select class="course" id="fcourse" onchange="myFunction()" placeholder="Course">
+                <option value="course">course</option>
+                <option value="btech">Btech</option>
+                <option value="BCA">BCA</option>
+                <option value="Mbbs">Mbbs</option>
+            </select>
+        </div>
+
+        <input type="radio" name="Gender" value="male"/><span style="color: white;">Male</span>
+         <input type="radio" name="Gender" value="Female"/><span style="color: white;">Female</span>
+         <input type="radio" name="Gender" value="others"/><span style="color: white;">Others</span>
+
+    
+        <div class="formfirst border_bottom" id="email" >
+        <input type="email" id="femail" placeholder="Email" onchange="myFunction()" onkeyup="document.getElementById('emailerror').innerHTML = '';"  ><span id ="emailerror" class="formerror"></span>
+        </div>
+
+        <div class="formfirst border_bottom" id="phone">
+            <input type="text" id="fphone" size="10" placeholder="Phone" onchange="myFunction()" onkeyup="document.getElementById('phoneerror').innerHTML = '';"><span id ="phoneerror"class="formerror"></span>
+        </div>
+
+        <div class="formfirst border_bottom" id="pass" >
+            <input type="password" id="fpass" placeholder="Password" onchange="myFunction()" onkeyup="document.getElementById('passerror').innerHTML = '';"><span id ="passerror" class="formerror"></span>
+        </div> 
+
+        <div class="formfirst border_bottom" id=" cpass">
+            <input type="password" id="fcpass"  placeholder="Confirm Password" onchange="myFunction()"  onkeyup="document.getElementById('cpasserror').innerHTML = '';"><span id ="cpasserror" class="formerror"></span>
+        </div>
+
+        <div> 
+        <input class="but" type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+</body>
+<script>
+
+function validateform(){
+ 
+   var name =  document.getElementById('fname').value;
+   var course =  document.getElementById('fcourse').value;
+    var email =  document.getElementById('femail').value;
+    var mobile =  document.getElementById('fphone').value; 
+    var Password =  document.getElementById('fpass').value;
+    var  ConfirmPassword =  document.getElementById('fcpass').value;
+
+
+
+    if(name == ''){
+        document.getElementById('namerror').innerHTML = 'Please enter name!';
+        document.getElementById("namerror").style.backgroundColor = "red";
+        document.getElementById("namerror").style.color = "white";
+    }else{
+        document.getElementById('namerror').innerHTML = '';
+        document.getElementById("namerror").style.backgroundColor = "red";
+        document.getElementById("namerror").style.color = "white";
+    }
+
+    if(email == '')
+    {
+        document.getElementById('emailerror').innerHTML = 'Please enter email!';
+        document.getElementById("emailerror").style.backgroundColor = "red";
+        document.getElementById("emailerror").style.color = "white";
+        
+    }else{
+        document.getElementById('emailerror').innerHTML = '';
+        document.getElementById("emailerror").style.backgroundColor = "red";
+        document.getElementById("emailerror").style.color = "white";
+    }
+
+    if(mobile == ''){
+        document.getElementById('phoneerror').innerHTML = 'Please enter Contact!';
+        document.getElementById("phoneerror").style.backgroundColor = "red";
+        document.getElementById("phoneerror").style.color = "white";
+    }
+    else{
+        document.getElementById('phoneerror').innerHTML = '';
+        document.getElementById("phoneerror").style.backgroundColor = "red";
+        document.getElementById("phoneerror").style.color = "white";
+    }
+
+    if(Password == ''){
+        document.getElementById('passerror').innerHTML = 'Please enter Password!';
+        document.getElementById("passerror").style.backgroundColor = "red";
+        document.getElementById("passerror").style.color = "white";
+    }
+    else{
+        document.getElementById('passerror').innerHTML = '';
+        document.getElementById("passerror").style.backgroundColor = "red";
+        document.getElementById("passerror").style.color = "white";
+    }
+
+    if(ConfirmPassword == '')
+    {
+        document.getElementById('cpasserror').innerHTML = 'Please Confirm password!';
+        document.getElementById("cpasserror").style.backgroundColor = "red";
+        document.getElementById("cpasserror").style.color = "white";
+    }
+  
+   else if(ConfirmPassword != Password)
+    {
+        document.getElementById('cpasserror').innerHTML = 'Password not matched!';
+        document.getElementById("cpasserror").style.backgroundColor = "red";
+        document.getElementById("cpasserror").style.color = "white";
+    }
+    
+    else{
+        document.getElementById('cpasserror').innerHTML = '';
+        document.getElementById("cpasserror").style.backgroundColor = "red";
+        document.getElementById("cpasserror").style.color = "white";
+    }
+
+    
+   return false;
+}
+
+
+function myFunction() {
+  var w = document.getElementById("fname").value;
+  var x = document.getElementById("fcourse").value;
+  var y = document.getElementById("femail").value;
+  var z = document.getElementById("fphone").value;
+  var b = document.getElementById("fpass").value;
+  var a = document.getElementById("fcpass").value;
+//   console.log (w,x,y,z,b,a)
+var arr = [w,x,y,z,b,a]
+console.log("formData",arr)
+
+
+}
+
+
+</script>
+</html>
